@@ -1,29 +1,26 @@
 import React from 'react'
-const github_username = 'darkguy10'
-const discord_usertag = 'HaiseSasaki#7599'
-const discord_userid = '755109987474473059'
-const email = 'harperburn@protonmail.ch'
+const github_username = 'root'
+const discord_usertag = 'yeho_00'
+const discord_userid = 'yeho_00'
+const email = 'jsh085@gmail.com'
 
 const projects = [
-	'darkguy10/BotClient',
-	'darkguy10/Shellplate',
-	'darkguy10/Fakestream',
-	'darkguy10/ControlPanelAPI.js',
-	'darkguy10/Deb8M8',
-	'darkguy10/EmojiSteal',
+	'yeho/BOT',
+	'yeho/backdoor',
+	'yeho/network-socket',
 ]
 
 const links = [
 	{
 		name: 'GitHub',
 		icon: 'fab fa-fw fa-github',
-		link: 'https://github.com/darkguy10',
+		link: 'https://github.com/yeho',
 		description: 'My profile on GitHub',
 	},
 	{
 		name: 'Website',
 		icon: 'fas fa-fw fa-coffee',
-		link: 'https://darkguy10.github.io/',
+		link: 'https://yehovaldespino.com',
 		description: 'Personal website',
 	},
 	{
@@ -42,24 +39,10 @@ const links = [
 
 const info = (
 	<>
-		<p>Yo! I'm a highschooler who codes as a hobby.</p>
-		<p>
-			I've got intermediate experience with{' '}
-			<span className="highlighted">JavaScript</span> and{' '}
-			<span className="highlighted">Node.js</span>.
+		<p>I am <span className="highlighted">Senior Engineer</span> with +9 years of experience designing, developing, architecting and maintaining applications in the E-commerce, Insurance and Retail industry. {' '}
 		</p>
-		<p>
-			I've been doing{' '}
-			<span className="highlighted">front-end web designing</span> as a
-			fun pastime for a couple of years now. Currently, I'm learning{' '}
-			<span className="highlighted">React</span> and{' '}
-			<span className="highlighted">Next.js</span>
-		</p>
-		<p>
-			Aside from that, I have basic knowledge of{' '}
-			<span className="highlighted">python</span>,{' '}
-			<span className="highlighted">java</span> and{' '}
-			<span className="highlighted">shell scripting.</span>
+		<p>			
+		<span className="highlighted">Architecting core features for corporate apps</span>{' '}
 		</p>
 	</>
 )

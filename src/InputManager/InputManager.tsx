@@ -27,7 +27,7 @@ class InputManager extends Component<
 		return (
 			<div className={styles.inputWrapper}>
 				<span className={styles.promptPrefix}>
-					<span>{github_username}</span>@<span>promptfolio:</span>
+					<span>{github_username}</span>@<span>YehoWebsite:</span>
 					~$&nbsp;
 				</span>
 				<form

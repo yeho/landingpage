@@ -36,13 +36,13 @@ const rawCommands: Command[] = [
 		execute(app) {
 			const { userDataLoaded, userData } = app.state
 			if (!userDataLoaded)
-				return <>promptfolio: user data could not be fetched</>
+				return <>YehoWebsite: user data could not be fetched</>
 			const { avatar_url, login, name, bio } = userData
 			return (
 				<div className={styles.infoWrapper}>
 					<div className={styles.infoInner}>
 						<img
-							src={avatar_url}
+							src={"foto.png"}
 							className={styles.avatar}
 							alt="GitHub avatar"
 						/>
@@ -51,14 +51,18 @@ const rawCommands: Command[] = [
 								<strong>{name}</strong>{' '}
 								<span className="muted">@{login}</span>
 							</div>
-							<em className={styles.bio}>"...{bio}"</em>
+							
 							<div className={styles.info}>{info}</div>
 						</div>
 					</div>
 
 					<div className={styles.icons}>
-						<i className="fab fa-fw fa-react"></i>
-						<i className="fab fa-fw fa-sass"></i>
+						<i className="fab fa-fw fa-android"></i>
+						<i className="fab fa-fw fa-aws"></i>
+						<i className="fab fa-fw fa-cpanel"></i>
+						<i className="fa-brands fa-square-git"></i>
+						<i className="fab fa-fw fa-raspberry-pi"></i>
+						<i className="fab fa-fw fa-github"></i>
 						<i className="fab fa-fw fa-js-square"></i>
 						<i className="fab fa-fw fa-node-js"></i>
 						<i className="fab fa-fw fa-python"></i>
@@ -71,11 +75,11 @@ const rawCommands: Command[] = [
 	{
 		name: 'projects',
 		icon: 'fas fa-fw fa-tools',
-		description: 'Display a list of my major projects',
+		description: 'Display a list of my projects',
 		execute(app) {
 			const { projectDataLoaded, projectData } = app.state
 			if (!projectDataLoaded)
-				return <>promptfolio: project data could not be fetched</>
+				return <>YehoWebsite: project data could not be fetched</>
 			return (
 				<>
 					{projectData.map(
@@ -124,6 +128,56 @@ const rawCommands: Command[] = [
 			})
 		},
 	},
+	{
+		name: 'whoami',
+		icon: 'fas fa-fw fa-id-badge',
+		description: 'Show logged user ',
+		execute(app) {
+			const { commands } = app.state
+			return (
+				<>
+					root
+				</>
+			)
+		},
+	},
+	{
+		name: 'date',
+		icon: 'fas fa-fw fa-calendar',
+		description: 'Show current date ',
+		execute(app) {
+			const { commands } = app.state
+			return (
+				<>
+					{new Date().toLocaleString()}
+				</>
+			)
+		},
+	},
+	{
+		name: 'art',
+		icon: 'fas fa-fw fa-coffee',
+		description: 'Show ascii art',
+		execute(app) {
+			const { commands } = app.state
+			return (
+				<>
+				
+					<p><span className="highlighted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)   <br/>
+					&nbsp;&nbsp;(&nbsp;/(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(&nbsp;/(&nbsp;&nbsp;(&nbsp;/(   <br/>
+					&nbsp;&nbsp;)\())&nbsp;(&nbsp;&nbsp;&nbsp;&nbsp;)\())&nbsp;)\())  <br/>
+					&nbsp;((_)\&nbsp;&nbsp;)\&nbsp;&nbsp;((_)\&nbsp;((_)\   <br/>
+					__&nbsp;((_)((_)&nbsp;&nbsp;_((_)&nbsp;&nbsp;((_)  <br/>	
+					\&nbsp;\&nbsp;/&nbsp;/|&nbsp;__||&nbsp;||&nbsp;|&nbsp;/&nbsp;_&nbsp;\ <br/>
+					&nbsp;\&nbsp;V&nbsp;/&nbsp;|&nbsp;_|&nbsp;|&nbsp;__&nbsp;||&nbsp;(_)&nbsp;| <br/>
+					&nbsp;&nbsp;|_|&nbsp;&nbsp;|___||_||_|&nbsp;\___/  <br/>
+					</span>	</p>
+				</>
+			)
+		},
+	},
+
+	
 ]
 const commands: Commands = new Map(rawCommands.map(cmd => [cmd.name, cmd]))
 
