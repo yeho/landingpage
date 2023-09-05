@@ -12,6 +12,12 @@ const projects = [
 
 const links = [
 	{
+		name: 'Blog',
+		icon: 'fa fa-rss',
+		link: 'https://yehovaldespino.com/blog',
+		description: 'My personal blog',
+	},
+	{
 		name: 'GitHub',
 		icon: 'fab fa-fw fa-github',
 		link: 'https://github.com/yeho',
